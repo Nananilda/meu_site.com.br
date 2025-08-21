@@ -18,4 +18,7 @@
     else if($imc > 30){
         echo "<br>$nome está obeso(a)";
     }
+    echo "<br>";
+    echo "<img src= 'https://viverbem.unimedbh.com.br/wp-content/uploads/2021/06/tabela-IMC.png' alt='Imagem de tabela dos IMCs' height='225' width='400'>"."<br>";
+    echo "<a href=http://127.0.0.1/meu_site.com.br/20250821/imc.com.br/paginaimc.html>clique aqui para voltar à página inicial</a>";
 ?>
