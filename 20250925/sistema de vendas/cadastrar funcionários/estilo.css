@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+    font-family: "Space Grotesk", sans-serif; 
+}
+#body3{
+    background: linear-gradient(135deg, #ffffff 0%, #B0E0E6 100%);
+    color: #333;
+}
+
+.head2{
+    text-align: center;
+    color: #333;
+}
+
+#div4{
+    background-color: #B0E0E6;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#div5{
+    background-color: aliceblue;
+    width: 200px;
+    margin: 130px;
+    border-radius: 15px;
+    border: 1px solid color black;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    padding: 15px;
+    margin-left: 655px;
+}
+
+#div6{
+    background-color: #B0E0E6;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    margin-top: 100px;
+}
+
+#input{
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid color black;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#button{
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid;
+}
+
+.voltar2{
+    text-align: center;
+    width: 175px;
+    border: 1px solid color black;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    margin: 50px;
+    margin-left: 670px;
+}
