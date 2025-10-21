@@ -1,0 +1,54 @@
+header{
+    background-color: rgb(57, 79, 144);
+    height: 70px;
+    width: 1483px;
+    margin-left: -10px;
+    margin-top: -20px;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(131, 168, 216);
+}
+
+#div1{
+    background-color: aliceblue;
+    display: grid;
+    height: 100px;
+    width: 430px;
+    margin: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3)
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+
+input{
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+#p1{
+    margin-left: 250px;
+    margin-top: -25px;
+}
+
+#div2{
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}

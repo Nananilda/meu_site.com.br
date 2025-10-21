@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>potencia</title>
 </head>
 <body>
-    <form action="potencia.php" method="post">
+    <form method="post">
         <label>Valor n:</label>
         <p><input type="number" name="n" required></p>
         <br>
@@ -20,5 +20,6 @@
 <?php
     $n = $_POST['n']??'';
     $p = $_POST['p']??'';
-    echo 'potência: ' . pow($n,$p)
+    $r = pow($n,$p);
+    echo "$r";
 ?>
