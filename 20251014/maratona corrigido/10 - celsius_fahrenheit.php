@@ -10,7 +10,7 @@
 </form>
 
 <?php
-    $c = $_POST['c'];
+    $c = $_POST['c']??'';
     $f = ($c*1.8)+32;
     echo "$c C° = $f °F";
 ?>

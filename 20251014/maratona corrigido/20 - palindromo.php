@@ -15,7 +15,7 @@
     </form>
 
 <?php
-    $palavra = $_POST['palavra'];
+    $palavra = $_POST['palavra']??'';
     if ($palavra == strrev($palavra)){
         echo "$palavra é um palíndromo";
     } else {

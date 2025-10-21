@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $t = intval($_POST['t']);
+    $t = intval($_POST['t']??'');
     echo strrev($t);
     // strrev = função nativa, inverte a palavra
 ?>

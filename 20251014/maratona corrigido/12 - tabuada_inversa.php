@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $n = intval($_POST['n']);
+    $n = intval($_POST['n']??'');
     for ($i = 10; $i >= 1; $i--){
         echo "$n x $i = " . ($n * $i) . "<br>";
     }

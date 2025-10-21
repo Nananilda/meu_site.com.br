@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $n = intval($_POST['n']);
+    $n = intval($_POST['n']??'');
     echo decbin($n);
     // decibin = função nativa do php, converte decimal em binário
     // intdiv = divide o número por 2, e ignora o resto da divisão

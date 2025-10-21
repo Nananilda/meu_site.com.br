@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $n = intval($_POST['n']);
+    $n = intval($_POST['n']??'');
     while ($n >= 0) {
         echo "$n<br>";
     $n--;

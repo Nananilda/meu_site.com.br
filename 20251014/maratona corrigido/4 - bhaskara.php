@@ -20,9 +20,9 @@
 </html>
 
 <?php
-    $valora = $_POST['valora'];
-    $valorb = $_POST['valorb'];
-    $valorc = $_POST['valorc'];
+    $valora = $_POST['valora']??'';
+    $valorb = $_POST['valorb']??'';
+    $valorc = $_POST['valorc']??'';
     $delta = ($valorb^2)+4*$valora*$valorc;
     $raiz1 = (($valorb*-1)-$delta)/2*$valora;
     $raiz2 = (($valorb*-1)+$delta)/2*$valora;

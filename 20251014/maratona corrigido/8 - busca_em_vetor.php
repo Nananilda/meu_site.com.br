@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $busca = intval($_POST['busca']);
+    $busca = intval($_POST['busca']??'');
     $vetor = [4, 8, 15, 16, 23, 43, 50, 86, 93, 100];
     $achou = false;
     foreach ($vetor as $i => $valor){

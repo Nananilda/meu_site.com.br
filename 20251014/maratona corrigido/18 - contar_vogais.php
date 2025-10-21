@@ -15,7 +15,7 @@
 </html>
 
 <?php
-    $str = $_POST['str'];
+    $str = $_POST['str']??'';
     // a função nativa = preg_math_all. realiza buscas com parâmetro
     $vogais = preg_match_all('/[aeiou]/i', $str);
     echo "total de vogais: $vogais";
