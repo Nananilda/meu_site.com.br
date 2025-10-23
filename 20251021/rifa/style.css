@@ -1,54 +1,111 @@
-header{
-    background-color: rgb(57, 79, 144);
-    height: 70px;
-    width: 1483px;
-    margin-left: -10px;
-    margin-top: -20px;
-    padding: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
-
 body{
     background-color: rgb(131, 168, 216);
-}
-
-#div1{
-    background-color: aliceblue;
-    display: grid;
-    height: 100px;
-    width: 430px;
-    margin: 20px;
-    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3)
+    margin: 0;
+    padding: 0;
 }
 
-button{
-    background-color: darkblue;
+header{
+    background-color: rgb(57, 79, 144);
+    height: 80px;
+    width: 100%;
     color: white;
-    border: 1px solid darkblue;
-    border-radius: 20px;
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
+    text-align: center;
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-input{
+/* formulário */
+#div1 {
+    background-color: aliceblue;
+    width: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#div1 label{
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#div1 input{
+    width: 300px;
+    padding: 8px;
     border: 1px solid gainsboro;
     border-radius: 20px;
 }
 
-#p1{
-    margin-left: 250px;
-    margin-top: -25px;
+#div1 button{
+    background-color: darkblue;
+    color: white;
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 20px;
 }
 
-#div2{
+#div1 button:hover{
+    background-color: rgb(40, 40, 130);
+}
+
+/* resultado do sorteio */
+#resultado{
     background-color: aliceblue;
-    padding: 20px;
+    width: 800px;
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#premio{
+    font-size: 22px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+#numeroSorteado{
+    font-size: 80px;
+    color: rgb(24, 24, 94);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#dataHora{
+    font-size: 22px;
+    color: rgb(40, 40, 80);
+}
+
+#resultadoPessoa{
+    background-color: aliceblue;
+    width: 800px;
+    padding: 25px;
+    margin: 0 auto 50px auto;
+    border-radius: 20px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+    font-size: 22px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#vencedores{
+    background-color: aliceblue;
+    width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+#vencedores h2{
+    color: darkblue;
+    margin-bottom: 10px;
 }

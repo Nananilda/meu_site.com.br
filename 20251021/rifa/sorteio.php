@@ -3,55 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Sorteio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Sorteio</h1>
+        <h1>Sorteio de Rifa</h1>
     </header>
-    <div id="div1">
+
+    <?php
+    $arquivo = "vencedores.json";
+    if (!file_exists($arquivo)){
+        file_put_contents($arquivo, json_encode([]));
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $nome = $_POST['nome'];
+        $numero = $_POST['numero'];
+        $premio = $_POST['premio'];
+        $aleatorio = rand(0, 1000);
+        $data = date("d/m/Y");
+        $hora = date("H:i:s");
+        $vencedores = json_decode(file_get_contents($arquivo), true);
+        $jaGanhou = false;
+        foreach ($vencedores as $v) {
+            if ($v['nome'] === $nome){
+                $jaGanhou = true;
+                break;
+            }
+        }
+    ?>
+
+    <div id="resultado">
+        <div id="destaque">
+            <h2><?php echo htmlspecialchars($premio); ?></h2>
+            <h1><?php echo $aleatorio; ?></h1>
+            <h3><?php echo "$data - $hora"; ?></h3>
+        </div>
+        <div id="ganho">
+            <?php
+            if ($jaGanhou){
+                echo "<p>$nome já ganhou antes e não pode participar novamente.</p>";
+            } else{
+                if ($numero == $aleatorio){
+                    echo "<p>$nome! ganhou!</p>";
+                    $vencedores[] = [
+                        "nome" => $nome,
+                        "numero" => $numero,
+                        "premio" => $premio,
+                        "data" => $data,
+                        "hora" => $hora
+                    ];
+                    file_put_contents($arquivo, json_encode($vencedores, JSON_PRETTY_PRINT));
+                } else{
+                    echo "<p>não foi dessa vez, $nome.</p>";
+                }
+            }
+            ?>
+        </div>
+        <div id="vencedores">
+            <h2>vencedores</h2>
+
+            <?php
+            if (count($vencedores) > 0){
+                echo "<ul>";
+                foreach ($vencedores as $v) {
+                    echo "<li>{$v['nome']} — Nº {$v['numero']} — {$v['premio']} ({$v['data']} às {$v['hora']})</li>";
+                }
+                echo "</ul>";
+            } else{
+                echo "<p>nenhum vencedor ainda.</p>";
+            }
+            ?>
+        </div>
+        <div id="voltar">
+            <a href="sorteio.php">novo sorteio</a>
+        </div>
+    </div>
+
+    <?php
+    } else{
+    ?>
+
+    <div id="formulario">
         <form method="post">
-            <br>
-            <label>Digite qual o prêmio:</label>
-            <input type="text" name="premio" required>
-            <br><br>
-            <label>Digite qual o número da sua rifa:</label>
-            <input type="number" name="numero" required>
-            <br>
+            <label>nome:</label><br>
+            <input type="text" name="nome" required><br><br>
+            <label>número da rifa:</label><br>
+            <input type="number" name="numero" required><br><br>
+            <label>prêmio:</label><br>
+            <input type="text" name="premio" required><br><br>
             <button type="submit">sortear</button>
-            <p id="p1">sorteio de 0 a 1000</p>
+            <p>sorteio de 0 a 1000</p>
         </form>
     </div>
+
+    <?php
+    }
+    ?>
+
 </body>
 </html>
-
-<div id="div2">
-    <div id="div3">
-        <?php
-            $premio = $_POST['premio']??'';
-            $aleatorio = rand(0, 1000);
-            echo $premio . "<br>";
-            echo $aleatorio;
-        ?>
-    </div>
-    <div id="div4">
-        <?php
-            echo date("d/m/Y") . "<br>";
-            echo date("H:i:s");
-        ?>
-    </div>
-    <div id="div5">
-        <?php
-           $numero = $_POST['numero']??'';
-           if ($numero == $aleatorio){
-            echo "você ganhou a rifa!";
-           } else{
-            echo "você não ganhou a rifa";
-           }
-        ?>
-    </div>
-</div>
-
-<!-- quem ganhou o prêmio não pode ganhar novamente -->
-<!-- listar quem já ganhou em baixo -->
