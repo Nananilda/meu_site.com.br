@@ -1,111 +1,92 @@
 body{
-    background-color: rgb(131, 168, 216);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header{
-    background-color: rgb(57, 79, 144);
-    height: 80px;
-    width: 100%;
-    color: white;
-    text-align: center;
-    font-size: 28px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* formulário */
-#div1 {
-    background-color: aliceblue;
-    width: 450px;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 40px auto;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-}
-
-#div1 label{
-    display: block;
-    margin: 10px 0 5px;
-}
-
-#div1 input{
-    width: 300px;
-    padding: 8px;
-    border: 1px solid gainsboro;
-    border-radius: 20px;
-}
-
-#div1 button{
-    background-color: darkblue;
-    color: white;
-    border: 1px solid darkblue;
-    border-radius: 20px;
-    margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 8px 20px;
-}
-
-#div1 button:hover{
-    background-color: rgb(40, 40, 130);
-}
-
-/* resultado do sorteio */
-#resultado{
-    background-color: aliceblue;
-    width: 800px;
-    padding: 30px;
-    margin: 0 auto 30px auto;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#premio{
-    font-size: 22px;
-    color: darkblue;
+header{
+    background-color: #2F4156;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#formulario, #cadastro, #resultado, #vencedores{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#formulario form, #cadastro form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 0 auto;
+}
+
+button{
+    background-color: #2F4156;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+}
+
+button:hover{
+    background-color: #1f2c3d;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.msg-sucesso{
+    background-color: #c8e6c9;
+    color: #256029;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+}
+
+.ganhou{
+    color: green;
     font-weight: bold;
 }
 
-#numeroSorteado{
-    font-size: 80px;
-    color: rgb(24, 24, 94);
-    font-weight: bold;
-    margin: 10px 0;
+.nao-ganhou{
+    color: red;
 }
 
-#dataHora{
-    font-size: 22px;
-    color: rgb(40, 40, 80);
+.voltar a{
+    text-decoration: none;
+    background-color: #2F4156;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
-#resultadoPessoa{
-    background-color: aliceblue;
-    width: 800px;
-    padding: 25px;
-    margin: 0 auto 50px auto;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 22px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-}
-
-#vencedores{
-    background-color: aliceblue;
-    width: 800px;
-    margin: 0 auto 50px auto;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-}
-
-#vencedores h2{
-    color: darkblue;
-    margin-bottom: 10px;
+.voltar a:hover{
+    background-color: #1f2c3d;
 }
