@@ -19,6 +19,7 @@
     fwrite($arquivo_vencedores, "$ganhador | $numeroSorteado | $premio | $data | $hora\n");
 
     $numeroSorteado = rand(1, 300);
+    date_default_timezone_set("America/Sao_Paulo");
     $data = date("d/m/Y");
     $hora = date("H:i:s");
 
